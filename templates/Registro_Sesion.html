@@ -1,0 +1,367 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro_Cuenta</title>
+    
+     
+</head>
+<style >
+html {
+	margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+
+	background: linear-gradient( 70deg, #140C51, #08032D);
+	-webkit- background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Roboto;
+}
+
+.principal{
+	position:absolute;
+	top: -5px;		;
+	background: linear-gradient( 70deg, #140C51, #08032D);
+	width: 180%;
+	max-width: 2005px;
+	left: -1300px;
+	
+	height: 350px;
+	margin: 0px auto;
+	color: #080808;
+	padding: 310px;
+
+}
+
+.contenedor{
+	position: absolute;
+	top: -5px;
+	width: 15%;
+	right: -24px;
+	height: 555px;
+	background: rgb(250, 249, 249);
+	padding: 210px;
+}
+
+.contenedor .register input[type="submit"]{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	background:#F8F4F6  ;
+	color: 	#5A595A ;
+	border: #B8B5B6  2px solid;
+	width: 	20%;
+	padding: 10px 0;
+	font-weight:normal	;
+	font-family: 	Roboto;
+	letter-spacing: 	1px;
+	font-size: 16px;
+	cursor: 	pointer;
+	transition: 	all .5s ease;
+
+	
+
+}
+
+.contenedor .register input[type="submit"]:hover{
+
+	background: #D3CFD2  ;
+	}
+.contenedor input[type ="text"]{ 
+	
+	padding: 5px 110px;
+	
+}
+.contenedor input[type ="password"]{ 
+	
+	padding: 5px 110px;
+	
+}
+.contenedor .seleciontipo select{ 
+	
+	padding: 5px 120px;
+	
+}
+
+
+
+.contenedor .Politicas-manejo{ 
+	
+	position: absolute;
+	top: 630px;
+	right: 	305px;
+	
+}
+
+.contenedor .contexto{
+	position: absolute;
+	top: 140px;
+	right: 190px;
+
+
+}
+
+
+.contenedor .enviar button[type="submit"]{
+	position: absolute;
+	top: 	840px;
+	background:#EC1095;
+	color: 	#fff;
+	border:none;
+	right: 220px;
+	width: 	40%;
+	padding: 10px 0;
+	font-weight:normal	;
+	font-family: 	Roboto;
+	letter-spacing: 	1px;
+	font-size: 16px;
+	cursor: 	pointer;
+	transition: 	all .5s ease;		
+
+}
+
+.contenedor .enviar button[type="submit"]:hover{
+
+	background: #FC83CD;
+	}
+.contenedor .pregunta h1{
+    position: relative;	
+    top: -180px;
+    right: 	-150px;
+	margin: 0 0 28px 0;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1;
+		
+	text-decoration: underline ;
+	
+
+}
+.contenedor h2{
+
+	margin: 0 0 28px 0;
+
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 1;
+	
+
+}	
+
+.contenedor-imagen{
+	position: absolute;		;
+	
+	width: 70%;
+	max-width: 100px;
+	left: -1600px;
+	right: 0px;
+	height: 485px;
+	margin: 0px auto;
+	color: #080808;
+	padding: 80px;
+
+}
+
+.letra h2{
+	position: 	absolute;
+	top: 	400px;
+	left: 120px;
+	font-size: 	50px;
+	font-weight: 	bold;	
+	padding:0 40px;
+	line-height: 	90px;
+	text-decoration: 	none;	
+
+	color: #444444;	
+}	
+
+
+	
+	
+
+.contenedor .enviar1 button[type="submit"]{
+	position: absolute;
+	top: 	770px;
+	background:#EC1095;
+	color: 	#fff;
+	border:none;
+	right: 110px;
+	width: 	40%;
+	padding: 10px 0;
+	font-weight:normal	;
+	font-family: 	Roboto;
+	letter-spacing: 	1px;
+	font-size: 16px;
+	cursor: 	pointer;
+	transition: 	all .5s ease;		
+
+}
+
+.contenedor .enviar1 button[type="submit"]:hover{
+
+	background: #FC83CD;
+	}
+	
+</style>
+
+
+<body>
+		
+	<div class="principal">
+		<div class="contenedor"> 
+			<div class="register">
+				<form action="http://127.0.0.1:8000/Inicio_Sesion/Cliente">
+					<input type="submit" value="Iniciar sesion"> 	
+				</form>
+
+				
+			</div>
+			<div class="contenido">
+				<div class="pregunta">
+					<h1>¿Ya tiene una cuenta?</h1>	
+				</div>
+				<div class="contexto">
+					<h2>Registrate en BookStore</h2>
+					<span>Ingresa tus datos en el siguiente formulario:
+					</span>
+					<form method="post">
+						{% csrf_token%}
+						<h2></h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Correo Electrónico</label>
+									<h2>
+										<input class="form-control" type="text" name="email" required>
+									</h2>
+									
+								</div>
+							</div>
+							
+						</div>
+						<h2></h2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Nombre(s)</label>
+								</div>
+							</div>
+							{{form.username}}
+						</div>
+						<H2></H2>
+						<H2></H2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Apellido(s)</label>
+								</div>
+								<input class="form-control" type="text" name="last_name" required>
+							</div>
+						</div>
+						<h2></h2>
+						<div>
+							<tr>
+								<td>Tipo de Documento</td>
+								<div class="seleciontipo">
+									<h2>
+										<td>
+											<select name="first_name">
+												<option value="Cedula de ciudadania">Cedula de ciudadania</option>
+												<option value="Tarjeta Identidad">Tarjeta Identidad</option>
+												<option value="Cedula Extranjera">Cedula Extranjera</option>
+											</select>
+										</td>
+									</h2>
+								</div>
+							</tr>
+						</div>
+						<H2></H2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Numero de documento</label>
+								</div>
+								<input class="form-control" type="text" name="documento" required>
+							</div>
+						</div>
+						<h2></h2>
+						<H2></H2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Contraseña</label>
+								</div>
+							</div>
+							{{form.password1}}
+						</div>
+						<H2></H2>
+						<div class="row">
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+									<label>Confirmar Contraseña</label>
+								</div>
+							</div>
+							{{form.password2}}
+						</div>
+						<h2></h2>
+						<div>
+							<tr>
+								<div class="politicas">
+									<em style="top: -200px;">Acepto Politicas de privacidad y manejo de datos</em>
+								</div>
+								<div class="Politicas-manejo">
+									<h1></h1>
+									<td><input type="radio" value="Si" name="Gender"  >Si |
+										<input type="radio"  value="No" name="Gender" >No
+									</td>
+								</div>
+							</tr>
+						</div>
+						<h2></h2>
+						<div class="enviar1">
+							<button class="btn btn-primary" type="submit">REGISTRARME</button>
+							
+						</div>
+						
+						{% if messages %}
+						{% for msg in messages %}
+						<h2 style="color:#FDFDFE   ; background-color: #918AFA ; position: absolute;top: 100px;">{{msg}}
+	                    </h2>
+						{% endfor %}
+						{% endif %}
+					</form>
+					{{form.errors}}
+					
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+<body>
+	<div class="contenedor-imagen">
+		<img src="{% static '/img/ima.png' %}" alt="Unsplashed background img 1">
+	</div>
+	<div class="letra">
+		<h2>BookStore</h2>	
+	</div>
+	
+
+</body>
+
+
+
+
+</html>
+
+

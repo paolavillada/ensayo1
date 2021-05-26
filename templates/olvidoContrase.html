@@ -1,0 +1,87 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recuperar_Contraseña</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <link href="{% static '/css/OlvidoContrase.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+    
+    
+</head>
+
+
+
+<body>
+		
+	<div class="principal">
+		<div class="contenedor"> 
+			<div class="register">
+				<form action="http://127.0.0.1:8000/Inicio_Sesion/Cliente?">
+					<input type="submit" value="Regresar"> 	
+				</form>
+
+				
+			</div>
+			<div class="contenido">
+				<div class="pregunta">
+					<h1>¿Deseas Iniciar Sesión?</h1>	
+				</div>
+				<div class="contexto">
+					<h2>Ingresa Tu Correo Electronico Acontinuación</h2>
+					<span>Enviaremos las instrucciones para la recuperación de tu contraseña
+					</span>
+					<h2></h2>
+					<form method="POST">
+						{% csrf_token %}
+						{{form}}
+						<h2></h2>
+						<div class="enviar">
+							<input type="Submit" name="Email">
+							
+						</div>
+						
+						
+					</form>
+					
+					
+				</div>
+				
+				
+			</div>
+
+		
+
+			
+		</div>
+
+	</div>
+	
+</body>
+
+
+
+<body>
+	<div class="contenedor-imagen">
+		<img src="{% static '/img/ima.png' %}" alt="Unsplashed background img 1">
+	</div>
+	<div class="letra">
+		<h2>BookStore</h2>	
+	</div>
+
+	
+</body>
+
+<body>
+
+	
+
+
+</body>
+
+
+
+
+</html>

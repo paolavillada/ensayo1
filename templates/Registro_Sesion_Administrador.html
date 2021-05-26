@@ -1,0 +1,110 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro_Cuenta</title>
+    <link href="{% static '/css/registro_Cuenta.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    
+    
+    
+</head>
+
+
+<body>
+		
+	<div class="principal">
+		<div class="contenedor"> 
+			
+			<div class="contenido">
+				<div class="pregunta">
+					<h1>Registro_Cuenta_administrador</h1>	
+				</div>
+				
+				<div class="contexto">
+					<h2>Registrate en BookStore</h2>
+					<span>Ingresa tus datos en el siguiente formulario:
+					</span>
+					<form method="POST">
+
+						{% csrf_token %}
+						
+						<h1></h1>
+						<tr>
+							<span>correo Electronico</span>
+							<h2>
+								<td><input type="text"  placeholder="Ingrese Correo" name="Email" required></td>
+								
+							</h2>
+							
+						</tr>
+						
+						<tr>
+							<td>Nombre(s)</td>
+							<h2>
+								<td><input type="text"  placeholder="Ingrese Nombre(s)" name="Username" required></td>
+								
+							</h2>
+							
+						</tr>
+						
+						
+						
+						<tr>
+							<td>Contraseña</td>
+							<h2>
+								<td><input type="password"  placeholder="Ingrese Contraseña" name="Pwd" required></td>	
+							</h2>
+						</tr>
+						
+						
+					
+				</div>
+
+						<tr>
+							<td></td>
+							<div class="enviar">
+								<td><button  type="submit">REGISTRARSE</button></td>
+								
+							</div>
+							
+						</tr>
+										
+						{% if messages %}
+						{% for msg in messages %}
+						<h2 style="color:#FDFDFE   ; background-color: #918AFA ; position: absolute;top: 100px;">{{msg}}
+	                    </h2>
+						
+						{% endfor %}
+						{% endif %}
+						
+						
+						
+					
+					</form>
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+<body>
+	<div class="contenedor-imagen">
+		<img src="{% static '/img/ima.png' %}" alt="Unsplashed background img 1">
+	</div>
+	<div class="letra">
+		<h2>BookStore</h2>	
+	</div>
+	
+
+</body>
+
+
+
+
+</html>

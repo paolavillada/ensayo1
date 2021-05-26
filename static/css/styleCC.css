@@ -1,0 +1,656 @@
+/*
+Template Name: Cuenta_Root_Contrasena- HTML
+
+Table OF Contents
+------------------------------------
+1 > GENERAL
+------ Typography
+
+2 > HEADER
+------ Top header
+------ Logo
+
+3 > MAIN CHANGE PASSWORD
+------ Menu Root
+------ Content Change Password
+------ Responsive Menu Root
+
+4 > FOLLOW US BOOKSTORE
+
+5 > FOOTER
+
+6 > RESPONSIVE HEADER
+
+------------------------------------*/
+
+/*=========================================================
+	01 -> GENERAL
+===========================================================*/
+
+/*----------------------------*\
+	Typography
+\*----------------------------*/
+
+@import url(../css/style.css);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #333;
+}
+
+/*=========================================================
+	02 -> HEADER
+===========================================================*/
+
+/*----------------------------*\
+  Top header
+\*----------------------------*/
+
+#top-header {
+  padding-top: 10px;
+  padding-bottom: -1px;
+  background-color: #0468BF; 
+}
+
+.header-links li a {
+
+  background: #0468BF;
+  color:#fff;
+  text-decoration: none;
+  padding: 1px 20px;
+  display:block;
+}
+
+.header-links > li {
+  float:left;
+  font-size: 12px;
+
+}
+
+.header-links li ul {
+  display:none;
+  position:absolute;
+}
+.header-links li:hover > ul {
+  display:block;
+}
+
+.header-links a {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px 20px;
+  color:#fff;
+}
+
+.header-links a:hover {
+
+  background: none;
+  color:#000;
+}
+
+.fa-facebook-square {
+    font-size: 23px;
+}
+
+.fa-facebook-square:hover {
+    background: #fff;
+    color:#002aff;
+}
+
+.fa-instagram-square {
+    font-size: 23px;
+}
+
+.fa-instagram-square:hover {
+    background: #fff;
+    color: #ee2a7b;
+}
+
+.fa-twitter-square {
+    font-size: 23px;
+}
+
+.fa-twitter-square:hover {
+    background: #fff;
+    color:#05AFF2;
+}
+
+.header-links1 li a {
+
+  background: #0468BF;
+  color:#fff;
+  text-decoration: none;
+  padding: 1px 20px;
+  display:block;
+  padding: 0px 10px;
+
+}
+
+.header-links1 li {
+    float:left;
+}
+
+/*----------------------------*\
+  Logo
+\*----------------------------*/
+
+#header {
+  padding-top: 40px;
+  padding-bottom: 0px;
+  background-color: background: rgb(95,146,223);
+  background: linear-gradient(90deg, rgba(95,146,223,1) 0%, rgba(95,146,223,1) 50%, rgba(95,146,223,1) 100%);
+  z-index: 2;
+}
+
+.header-logo {
+
+  
+}
+
+.header-logo .logo img {
+  display: block;
+  width: 100%;
+}
+
+/*=========================================================
+	03 -> MAIN CAMBIAR CONTRASEÑA
+===========================================================*/
+
+/*----------------------------*\
+  Menu Root
+\*----------------------------*/
+
+.contenedor-titulos {
+  width: 30%;
+  min-width: 405px;
+  margin: 0px;
+  display: inline-block;
+  background: #ECEAE6;
+
+}
+.contenedor-titulos h3 {
+  color:#000000;
+  display: block;
+  margin-left: 130px;
+  padding-top: 90px;
+  background: #ECEAE6;
+}
+
+.contenedor-titulos h4 {
+  margin-top: -20px;
+  color:#444444;
+  margin-left: 130px;
+  font-size: 12px;
+  margin-bottom: 90px;
+  text-decoration: none;
+}
+
+.icono{
+   font-size: 60px;
+   margin-top:-40px;
+   margin-left:60px;
+}
+
+a {
+  text-decoration: none;
+  color:#000000;
+}
+
+a:hover{
+  color: #000000;
+  transition: 0.5s;
+
+}
+
+.btn-menuV {
+  display: none;
+  padding: 20px;
+  background: #0468BF;
+  color:#fff;
+}
+
+.btn-menuV .iconob {
+  float: right;
+}
+
+.contenedor-menu {
+  width: 30%;
+  min-width: 405px;
+  height: 600px;
+  margin: 0px;
+  display: inline-block;
+  background: #ECEAE6;
+
+}
+
+.contenedor-menu .menu {
+  width: 100%;
+}
+.contenedor-menu ul {
+  list-style: none;
+}
+
+.contenedor-menu .menu li a {
+  color:#000;
+  display: block;
+  padding-top: 40px;
+  padding: 15px 40px;
+  background: #ECEAE6;
+  margin: 0px;
+  line-height: 25px;
+}
+
+.contenedor-menu .menu li a:hover {
+  background: #1a95d5;
+  color: #fff;
+  transition: 0.5s;
+}
+
+hr{
+  width: 81%; 
+  margin-top: -10px; 
+  border-color:#000;
+}
+
+hr:hover {
+  border-color: #fff;
+  transition: 0.5s;
+}
+
+.contenedor-menu .menu .iconos {
+  font-size: 20px;
+}
+
+.contenedor-menu .menu .iconos.iz {
+  float:left;
+  margin-right: 10px;
+}
+
+.contenedor-menu .menu .iconos.dr {
+  float:right;
+  margin-left: 10px;
+}
+
+/*----------------------------*\
+  Content Change Password
+\*----------------------------*/
+
+.contenido{
+  position: relative;
+  background-color:  #FDFDFB ;
+  top:0px;
+  right:0px;
+  width: 100%;
+}
+
+.contenido .titulos1 h2{
+  position: absolute;
+  margin-top: -560px;
+  left: 470px;
+  font-size: 23px;
+            
+}
+
+.contenido .titulos1 h3{
+  position: absolute;
+  margin-top: -500px;
+  left: 470px;
+  font-size: 18px;          
+}
+
+.contenido .titulos1 h4{
+  position: absolute;
+  margin-top: -470px;
+  left: 470px;
+  font-size: 12px;
+  font-weight: normal;          
+}
+
+.contenido .titulos2 h3{
+  position: absolute;
+  margin-top: -390px;
+  left: 470px;
+  font-size: 18px;          
+}
+
+.contenido .titulos2 h4{
+  position: absolute;
+  margin-top: -360px;
+  left: 470px;
+  font-size: 12px;
+  font-weight: normal;          
+}
+
+.contenido .titulos3 h3{
+  position: absolute;
+  margin-top: -275px;
+  left: 470px;
+  font-size: 18px;          
+}
+
+.contenido .titulos3 h4{
+  position: absolute;
+  margin-top: -245px;
+  left: 470px;
+  font-size: 12px;
+  font-weight: normal;          
+}
+
+.contenido .titulos4 h3{
+  position: absolute;
+  margin-top: -480px;
+  right: 230px;
+  font-size: 18px;          
+}
+
+.contenido .titulos4 p{
+  position: absolute;
+  margin-top: -400px;
+  right: 70px;
+  font-size: 16px;
+  font-weight: normal;          
+}
+
+.columnaizquiera {
+  position: absolute;
+  top: 80px;
+  right: 550px;
+}
+
+.crear {
+  font-size: 20px;
+  position: absolute;
+  margin-left: -200px;
+  top: 320px;
+  color:white;
+}
+
+.descartar {
+  font-size: 15px;
+  position: absolute;
+  margin-left: -160px;
+  margin-top: -200px;
+  color:white;
+}
+
+.guardar {
+  font-size: 15px;
+  position: absolute;
+  margin-left: -330px;
+  margin-top: -200px;
+  color:white;
+}
+
+.btn2 {
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-primary2 {
+    background: #444444;
+}
+
+.btn3 {
+  color: #fff;
+  border-radius: 5px;
+}
+
+.btn-primary3 {
+    background: #1464f6;
+}
+
+.columnaizquiera h3{
+  position: absolute;
+  top: 150px;
+  right: 165%;
+  font-size: 18px;
+
+}
+
+.columnaizquiera h4{
+  position: absolute;
+  top: 200px;
+  right: 165%;
+  font-size: 15px;
+  font-weight: normal;          
+}
+
+.columnaizquiera .imput1 input[type ="text"]{ 
+  width: 250px;
+  position: absolute;
+  right: 80px;
+  margin-top: -520px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.columnaizquiera .imput2 input[type ="cont"]{ 
+  width: 250px;
+  position: absolute;
+  right: 80px;
+  margin-top: -410px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.columnaizquiera .imput3 input[type ="conf"]{ 
+  width: 250px;
+  position: absolute;
+  right: 80px;
+  margin-top: -295px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.columnaderecha {
+  position: absolute;
+  top: 80px;
+  right: 150px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .contenido {
+    padding-top: 500px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    top:0;
+    z-index: 2000;
+  }
+
+  }
+
+/*----------------------------*\
+  Responsive Menu Root
+\*----------------------------*/
+
+@media screen and (max-width: 767px) {
+  .contenedor-menu {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    top:0;
+    z-index: 1000;
+  }
+
+  .btn-menuV {
+    display: block;
+  }
+
+  }
+
+/*=========================================================
+	04 -> FOLLOW US BOOKSTORE
+===========================================================*/
+
+#newsletter.section {
+  border-top: 2px solid #E4E7ED;
+  border-bottom: 3px solid #75a9f9;;
+  margin-top: 30px;
+}
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter p {
+  font-size: 24px;
+}
+
+.newsletter form {
+  position: relative;
+  max-width: 520px;
+  margin: 30px auto;
+}
+
+.newsletter form:after {
+  content: "\f003";
+  font-family: FontAwesome;
+  position: absolute;
+  font-size: 160px;
+  color: #E4E7ED;
+  top: 15px;
+  -webkit-transform: translateY(-50%) rotate(15deg);
+  -ms-transform: translateY(-50%) rotate(15deg);
+  transform: translateY(-50%) rotate(15deg);
+  z-index: -1;
+  left: -90px;
+}
+
+.newsletter form .input {
+  width: calc(100% - 160px);
+  margin-right: -4px;
+  border-radius: 40px 0px 0px 40px;
+}
+
+.newsletter form .newsletter-btn {
+  width: 160px;
+  height: 40px;
+  font-weight: 700;
+  background: #D10024;
+  color: #FFF;
+  border: none;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.newsletter .newsletter-follow {
+  text-align: center;
+}
+
+.newsletter .newsletter-follow li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.newsletter .newsletter-follow li:last-child {
+  margin-right: 0px;
+}
+
+.newsletter .newsletter-follow li a {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #E4E7ED;
+  background-color: #FFF;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.newsletter .newsletter-follow li a:hover, .newsletter .newsletter-follow li a:focus {
+  background-color: #E4E7ED;
+  color: #D10024;
+}
+
+/*=========================================================
+	05 -> FOOTER
+===========================================================*/
+
+#footer {
+  background: #021f54;
+  color: #B9BABC;
+}
+
+#bottom-footer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #120639
+}
+
+.footer {
+  margin: 40px 0px;
+}
+
+.footer .footer-title {
+  color: #FFF;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0px 0px 30px;
+}
+
+.footer-links li+li {
+  margin-top: 15px;
+}
+
+.footer-links li a {
+  color: #B9BABC;
+}
+
+.footer-links li i {
+  margin-right: 15px;
+  color: white;
+  width: 14px;
+  text-align: center;
+}
+
+.footer-links li a:hover {
+  color: #75a9f9;
+}
+
+.copyright {
+  margin-top: 0px;
+  display: block;
+  font-size: 12px;
+}
+
+.footer-payments li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.footer-payments li a {
+  color: #15161D;
+  font-size: 36px;
+  display: block;
+}
+
+/*=========================================================
+	06 -> RESPONSIVE HEADER
+===========================================================*/
+
+@media only screen and (max-width: 1201px) {}
+
+@media only screen and (max-width: 767px) {
+  #top-header .header-links.pull-left {
+    float: none !important;
+  }
+  #top-header .header-links.pull-right {
+    float: none !important;
+    margin-top: 5px;
+  }
+.header-logo {
+
+  padding-left: 450px;
+}
+
+.header-logo .logo img {
+  display: block;
+  width: 100%;
+}
+  
+}
+
+

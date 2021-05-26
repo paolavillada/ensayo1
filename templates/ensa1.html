@@ -1,0 +1,98 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro_Cuenta</title>
+    <link href="{% static '/css/registro_Cuenta.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
+    
+    
+    
+</head>
+
+
+<body>
+		
+	<div class="principal">
+		<div class="contenedor"> 
+			<div class="register">
+				<form action="http://127.0.0.1:8000/Inicio_Sesión">
+					<input type="submit" value="Iniciar sesion"> 	
+				</form>
+
+				
+			</div>
+			<div class="contenido">
+				<div class="pregunta">
+					<h1>¿Ya tiene una cuenta?</h1>	
+				</div>
+				<div class="contexto">
+					<h2>Registrate en BookStore</h2>
+					<span>Ingresa tus datos en el siguiente formulario:
+					</span>
+					<form method="POST" >
+						{% csrf_token %}
+						<tr>
+							<td>Correo Electrónico</td>
+							<h2>
+								<td><input type="text" placeholder="Enter Correo" name="Email" required></td>
+								
+							</h2>
+							
+						</tr>
+						<tr>
+							<td>Username</td>
+							<h2>
+								<td><input type="text" placeholder="Enter Correo" name="Username" required></td>
+								
+							</h2>
+							
+						</tr>
+						<tr>
+							<td>Contraseña</td>
+							<h2>
+								<td><input type="password" placeholder="Enter Password" name="Pwd" required></td>
+								
+							</h2>
+							
+						</tr>
+						<tr>
+							<td></td>
+							<div class="enviar">
+								<td><button  type="submit">ENTRAR</button></td>
+								
+							</div>
+							
+						</tr>
+						{% if messages %}
+						{% for msg in messages %}
+						<b style="color:#FDFDFE   ; background-color: #918AFA ; position: absolute;top: 100px;">{{msg}}</b>
+						{% endfor %}
+						{% endif %}
+					</form>
+
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+<body>
+	<div class="contenedor-imagen">
+		<img src="{% static '/imagenes/imagen1.png' %}" alt="Unsplashed background img 1">
+	</div>
+	<div class="letra">
+		<h2>BookStore</h2>	
+	</div>
+	
+
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,743 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BookStore</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+	<link href="{% static '/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static '/css/slick.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static '/css/slick-theme.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static '/css/nouislider.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static '/css/font-awesome.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="{% static '/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+	<script src="https://kit.fontawesome.com/65476426b2.js" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://kit.fontawesome.com/8699dd30ec.js" crossorigin="anonymous"></script>
+</head>
+<!-- HEADER -->
+		<header>
+			<!-- TOP HEADER -->
+			<div id="top-header">
+				<div class="container">
+					<ul class="header-links pull-left">
+						<li><a></i> Síguenos </a></li>
+						<li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+					</ul>
+					<ul class="header-links pull-right">
+						<li><a href="#"> PQRS </a></li>
+					    <a href="http://127.0.0.1:8000/Cuenta/Cliente" style="color: white;">Nombre de Cliente			</a>
+					</ul>
+					
+				</div>
+			</div>
+			<!-- /TOP HEADER -->
+
+			<!-- MAIN HEADER -->
+			<div id="header">
+				<!-- container -->
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<!-- LOGO -->
+						<div class="col-md-3">
+							<div class="header-logo">
+								<a href="#" class="logo">
+									<img src="{% static '/img/logo.png' %}" alt="Unsplashed background img 1">
+									
+								</a>
+							</div>
+						</div>
+						<!-- /LOGO -->
+
+						<!-- SEARCH BAR -->
+						<div class="col-md-6">
+							<div class="header-search">
+								<form>
+									<select class="input-select">
+										<option value="0">Libros</option>
+									</select>
+									<input class="input" placeholder="Buscar...">
+									<button class="search-btn"><i class="fas fa-search icon"></i></button>
+								</form>
+							</div>
+						</div>
+						<!-- /SEARCH BAR -->
+
+						<!-- ACCOUNT -->
+						<div class="col-md-3 clearfix">
+							<div class="header-ctn">
+								<!-- Wishlist -->
+								<div>
+									<a href="#">
+										<i class="fa fa-heart-o"></i>
+										<div class="qty">0</div>
+									</a>
+								</div>
+								<!-- /Wishlist -->
+
+								<!-- Cart -->
+								<div class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+										<i class="fa fa-shopping-cart"></i>
+										<div class="qty">0</div>
+									</a>
+									<div class="cart-dropdown">
+										<div class="cart-list">
+											<div class="product-widget">
+												<div class="product-img">
+
+													<img src="./img/product01.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">product name goes here</a></h3>
+													<h4 class="product-price"><span class="qty">1x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+
+											<div class="product-widget">
+												<div class="product-img">
+													<img src="./img/product02.png" alt="">
+												</div>
+												<div class="product-body">
+													<h3 class="product-name"><a href="#">product name goes here</a></h3>
+													<h4 class="product-price"><span class="qty">3x</span>$980.00</h4>
+												</div>
+												<button class="delete"><i class="fa fa-close"></i></button>
+											</div>
+										</div>
+										<div class="cart-summary">
+											<small></h5>
+										</div>
+										<div class="cart-btns">
+											<a href="#">View Cart</a>
+											<a href="#">Checkout  <i class="fa fa-arrow-circle-right"></i></a>
+										</div>
+									</div>
+								</div>
+								<!-- /Cart -->
+
+								<!-- Menu Toogle -->
+								<div class="menu-toggle">
+									<a href="#">
+										<i class="fa fa-bars"></i>
+										<span>Menu</span>
+									</a>
+								</div>
+								<!-- /Menu Toogle -->
+							</div>
+						</div>
+						<!-- /ACCOUNT -->
+					</div>
+					<!-- row -->
+				</div>
+				<!-- container -->
+			</div>
+			<!-- /MAIN HEADER -->
+		</header>
+					
+
+		
+
+<nav id="navigation">
+	<div class="container">
+		<div id="responsive-nav">
+			<ul class="main-nav nav navbar-nav">
+				<li class="active"><a href="http://127.0.0.1:8000/Cuenta/InicioCliente">INICIO</a></li>
+				<li><a href="http://127.0.0.1:8000/Cuenta/NovedadesCliente">NOVEDADES</a></li>
+				<li><a href="http://127.0.0.1:8000/Cuenta/ColeccionesCliente">COLECCIONES</a></li>
+				<li><a href="http://127.0.0.1:8000/Cuenta/PromocionesCliente">PROMOCIONES</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<style>
+html {
+	margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+
+	
+	-webkit- background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Roboto;
+}
+
+.principal{
+	position: absolute;
+	background-color: red;
+	right: 0px;
+	height: 300px;
+	padding: 300px;
+	width: 100%;
+	max-width: 1350px;
+}
+
+.menu{
+	position: absolute;
+	background-color:  #ECEAE6;
+	right: 950px;
+	top: 0px;
+	width: 100px;
+	padding: 200px;
+	height: 600px;
+	
+}
+
+.contenido{
+	position: absolute;
+	background-color:  #FDFDFB ;
+	top:0px;
+	right:0px;
+	padding: 475px;
+	width: 100px;
+	height: 600px;
+}
+
+.menu .toggle1{
+	position: absolute;
+	top: 197px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+
+
+
+}
+
+.menu .toggle1 a{
+	letter-spacing: 1px;
+
+}
+
+.menu .toggle1:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu .toggle2{
+	position: absolute;
+	top: 250px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+
+}
+
+.menu .toggle2 a{
+	letter-spacing: 1px;
+}
+
+.menu .toggle2:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu .toggle3{
+	position: absolute;
+	top: 300px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+
+}
+
+.menu .toggle3 a{
+	letter-spacing: 1px;
+}
+
+.menu .toggle3:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu .toggle4{
+	position: absolute;
+	top: 350px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+	
+
+
+}
+
+.menu .toggle4 a{
+	letter-spacing: 1px;
+}
+
+.menu .toggle4:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu .toggle5{
+	position: absolute;
+	top: 400px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+	
+
+}
+
+.menu .toggle5 a{
+	letter-spacing: 1px;
+}
+
+.menu .toggle5:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu .toggle6{
+	position: absolute;
+	top: 450px;
+	right: 0px;
+	width: 260px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 25px;
+	text-align: justify;
+	border-bottom: 2px solid blue;
+	transition: all .5s ease;
+	cursor: pointer;
+	
+
+}
+
+.menu .toggle6 a{
+	letter-spacing: 1px;
+}
+
+.menu .toggle6:hover{
+	
+	border-bottom: 2px solid #ff851b;
+}
+
+.menu h3{
+	position: absolute;
+	top: 65px;
+	right: 170px;
+}
+
+
+.menu .menu_toggles{
+	position: absolute;
+	right: 60px;
+	top: -10px;
+}
+.contenido h2{
+	position: absolute;
+	top: 0px;
+}
+
+.contenido h2{
+	position: absolute;
+	top: 5px;
+	right: 710px;
+	font-size: 20px;
+						
+}
+.columnaizquiera {
+	position: absolute;
+	top: 80px;
+	right: 550px;
+}
+.columnaizquiera .seleciontipo select{ 
+	padding: 2px 70px;
+}
+.columnaizquiera .imput2 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput3 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput4 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .imput5 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaizquiera .seleciontip select{ 
+	padding: 2px 70px;
+}
+.columnaderecha {
+	position: absolute;
+	top: 80px;
+	right: 150px;
+}
+.columnaderecha .imput6 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput7 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput8 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput9 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderecha .imput10 input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.menu_togglesperfil .toggle1{
+	position: absolute;
+	top: 40px;
+	right: 110px;
+	width: 750px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 41px;
+	text-align: justify;
+	border-bottom: 2px solid black;
+	transition: all .5s ease;
+	cursor: pointer;
+
+}
+.menu_togglesperfil .toggle1 a{
+	letter-spacing: 1px;
+}
+.menu_togglesperfil .toggle1:hover{
+	border-bottom: 2px solid blue;
+}
+.perfilCliente{
+	position: absolute;
+	top: 20px;
+	right: -50px;
+}
+.perfilCliente{
+	position: absolute;
+	right: 0px;
+}
+
+.partecontraseña{
+	position: absolute;
+	top: 500px;
+	right: 600px;
+
+}
+.columnaizquierdacontraseña{ 
+	position: absolute;
+	top: -20px;
+	right: -50px;
+	}
+.columnaizquierdacontraseña input[type ="text"]{ 
+	padding: 2px 60px;
+}
+.columnaderechacontraseña {
+	position: absolute;
+	top: -20px;
+	right: -460px;
+
+}
+.columnaderechacontraseña input[type ="password"]{ 
+	padding: 2px 60px;
+}
+.menu_togglescontraseña .toggle1{
+	position: absolute;
+	top: -80px;
+	right: -490px;
+	width: 760px;
+	height: 38px;
+	font-size: 12px;
+	line-height: 41px;
+	text-align: justify;
+	border-bottom: 2px solid black;
+	transition: all .5s ease;
+	cursor: pointer;
+}
+.menu_togglescontraseña .toggle1 a{
+	letter-spacing: 1px;
+}
+.menu_togglescontraseña .toggle1:hover{
+	border-bottom: 2px solid blue;
+}
+
+	
+</style>
+
+<body>
+	<aside>
+		<div class="principal">
+			<div class="contenedor" >
+				<div class="menu">
+					<i class="fas fa-user-circle" style="font-size: 50px;top: 65px;position: absolute;right: 310px;"></i>
+					<h3>Hola,Cliente</h3>
+					<a style="position: absolute;text-align: justify;top: 95px;right: 190px;">Bienvenido a tu cuenta</a>
+					<div class="menu_toggles">
+						<div class="toggle1">
+							<i class="fas fa-user-alt" style="position: absolute;font-size: 20px;right: 280px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Cuenta/Cliente_Perfil">Cuenta </a>
+						</div>
+						<div class="toggle2">
+							<i class="fas fa-clipboard-list"style="position: absolute;font-size: 20px;right: 285px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente">Realizar Reserva </a>
+						</div>
+						<div class="toggle3">
+							<i class="fas fa-shopping-basket" style="position: absolute;font-size: 20px;right: 280px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente">Realizar Compra </a>
+						</div>
+						<div class="toggle4">
+							<i class="fas fa-money-check-alt" style="position: absolute;font-size: 20px;right: 280px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente">Datos Financieros </a>
+						</div>
+						<div class="toggle5">
+							<i class="fas fa-search" style="position: absolute;font-size: 20px;right: 280px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente">Consultar Historico </a>
+						</div>
+						<div class="toggle6">
+							<i class="fas fa-sign-out-alt" style="position: absolute;font-size: 20px;right: 280px;top: 10px;"></i>
+							<a  href="http://127.0.0.1:8000/Inicio_Sesion/Cliente">Cerrar Sesión </a>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="contenido">
+					<h2>Administrar Perfil</h2>
+					<div class="menu_togglesperfil">
+						<div class="toggle1">
+							<i class="fas fa-user-edit" style="font-size: 15px;position: absolute;right: 50px;top: 15px;"></i>
+							<i class="fas fa-save" style="position: absolute;font-size: 15px;top: 15px;right: 30px;"></i>
+							
+							<a>Información Personal </a>
+						</div>
+					</div>
+					<div class="perfilCliente">
+						<form method="post">
+							{% csrf_token%}
+							
+							<div class="columnaizquiera">
+								<div >
+									<td>Tipo de Documento</td>
+									<h4></h4>
+									<div class="seleciontipo">
+										<select name="MartialStatus">
+											<option value="Cedula de ciudadania">Cedula de ciudadania</option>
+											<option value="Tarjeta Identidad">Tarjeta Identidad</option>
+											<option value="Cedula Extranjera">Cedula Extranjera</option>
+										</select>
+									</div>
+								</div>
+								<div class="imput2">
+									<td>Nombre(s)</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Nombre(s)" name="Username" required>
+								</div>
+								<div class="imput3">
+									<td>Fecha De Nacimiento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Fecha De Nacimiento" name="Username" required>	
+								</div>
+								<div class="imput4">
+									<td>Dirección</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Dirección" name="Username" required>	
+								</div>
+								<div class="imput5">
+									<td>Genero</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Genero" name="Username" required>	
+								</div>
+								<div>
+									<td>Temas literarios de preferencia</td>
+									<h4></h4>
+									<div class="seleciontip">
+										<select name="MartialStatus">
+											<option value="Tema Literario Amor">Tema Literario Amor</option>
+											<option value="Tema Literario Drama">Tema Literario Drama</option>
+											<option value="Tema Literario Terror">Tema Literario Terror</option>
+										</select>
+									</div>
+
+								</div>
+							</div>
+							<div class="columnaderecha">
+								
+								<div class="imput6">
+									<td>Numero De Documento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Numero De Documento" name="Username" required>
+								</div>
+								<div class="imput7">
+									<td>Apellido(s)</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Apellido(s)" name="Username" required>	
+								</div>
+								<div class="imput8">
+									<td>Lugar De Nacimiento</td>
+									<h4></h4>
+									<input type="text"  placeholder="Lugar De Documento" name="Username" required>	
+								</div>
+								<div class="imput9">
+									<td>Telefono Celular</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Telefono Celular" name="Username" required>	
+								</div>
+								<div class="imput10">
+									<td>Correo Electronico</td>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Correo Electronico" name="Username" required>	
+								</div>
+								<div>
+									<div class="politicas">
+										<td style="top: -200px;">Suscribirse al sistema noticias</td>
+									</div>
+									<div class="Politicas-manejo">
+										<h1></h1>
+										<td><input type="radio" value="Si" name="Gender"  >Si |
+											<input type="radio"  value="No" name="Gender" > No
+										</td>
+									</div>
+								</div>
+							</div>
+							
+							<div class="partecontraseña">
+								<div class="menu_togglescontraseña">
+									<div class="toggle1">
+										<i class="fas fa-user-edit" style="position: absolute;right: 50px;top: 15px;font-size: 15px;"></i>
+										<i class="fas fa-save" style="position: absolute;font-size: 15px;top: 15px;right: 30px;"></i>
+										<a>Información Contraseña </a>
+									</div>
+								</div>
+								<div class="columnaizquierdacontraseña">
+									<td>Usuario</td>
+									<h4></h4>
+									<h4></h4>
+									<input type="text"  placeholder="Ingrese Usuario" name="Username" required>
+
+								</div>
+								<div class="columnaderechacontraseña">
+									<td>Nueva Contraseña</td>
+									<h4></h4>
+									<h4></h4>
+									<input type="password"  placeholder="********" name="pwd" required>
+
+								</div>
+
+									
+							
+								
+								
+							</div>	
+						</form>
+					</div>
+				</div>
+
+
+
+
+
+				<footer id="footer" style="position: relative;top: 300px;height: 350px;right: 300px;max-width: 2300px;width: 1349px;">
+					<div class="section">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-3 col-xs-6">
+									<div class="footer">
+										<h3 class="footer-title">INFORMACIÓN LEGAL</h3>
+										<ul class="footer-links">
+											<li><a href="#"><i class="fas fa-desktop"></i>bookstore.com</a></li>
+											<li><a href="#"><i class="fas fa-phone-alt"></i>3208764563-(3)3313098</a></li>
+											<li><a href="#"><i class="fas fa-map-marker-alt"></i>Cra 9 No. 45-80 - Pereira - Colombia</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6">
+									<div class="footer">
+										<h3 class="footer-title">CORPORATIVO</h3>
+										<ul class="footer-links">
+											<li><a href="#">Quiénes somos</a></li>
+											<li><a href="#">Sedes</a></li>
+											<li><a href="#">Eventos</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6">
+									<div class="footer">
+										<h3 class="footer-title">CENTRO DE AYUDA</h3>
+										<ul class="footer-links">
+											<li><a href="#">PQRS</a></li>
+											<li><a href="#">Preguntas Frecuentes</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-md-3 col-xs-6">
+									<div class="footer">
+										<ul class="footer-payments">
+											<li><a href="#"><i class="fa fa-cc-visa"></i></a></li>
+											<li><a href="#"><i class="fa fa-credit-card"></i></a></li>
+											<li><a href="#"><i class="fa fa-cc-paypal"></i></a></li>
+											<li><a href="#"><i class="fa fa-cc-mastercard"></i></a></li>
+											<li><a href="#"><i class="fa fa-cc-discover"></i></a></li>
+											<li><a href="#"><i class="fa fa-cc-amex"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="bottom-footer" class="section" style="position: relative;top: 45px;">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<span class="copyright">© BookStore 2021-Todos los derechos reservados
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+				
+	        </div>
+			
+		</div>
+	</aside>
+</body>
+</html>

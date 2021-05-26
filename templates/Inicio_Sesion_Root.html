@@ -1,0 +1,112 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Iniciar_Cuenta_Root</title>
+    <link href="{% static '/css/iniciar_Sesion.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="https://kit.fontawesome.com/65476426b2.js" crossorigin="anonymous"></script>
+    
+   
+</head>
+<style >
+
+.contenedor .estilovolver{
+	position: absolute;
+	top: 150px;
+	right: 470px;
+
+}
+
+.contenedor .estilovolver a{
+	text-decoration: none;
+	color: #010101 ;
+}
+
+
+</style>
+
+<body>
+		
+	<div class="principal">
+		<div class="contenedor">
+			<div class="estilovolver">
+				<i class="fas fa-arrow-left">
+					<a href="http://127.0.0.1:8000/">Volver</a>
+				</i>
+			</div>
+
+			
+			<div class="contenido">
+				
+				<div class="contexto">
+					<h2>Inicia Sesión en BookStore</h2>
+					<span>Ingresa tus datos en el siguiente formulario
+					</span>
+					<h2></h2>
+					<form method="POST" >
+						{% csrf_token %}
+						<tr>
+							<td>Correo Electrónico</td>
+							<h2>
+								<td><input type="text" placeholder="Enter Correo" name="Email" required></td>
+								
+							</h2>
+							
+						</tr>
+						<tr>
+							<td>Contraseña</td>
+							<h2>
+								<td><input type="password" placeholder="Enter Password" name="Pwd" required></td>
+								
+							</h2>
+							
+						</tr>
+						<tr>
+							<td></td>
+							<div class="enviar">
+								<td><button  type="submit">ENTRAR</button></td>
+								
+							</div>
+							
+						</tr>
+						{% if messages %}
+						{% for msg in messages %}
+						<b>{{msg}}</b>
+						{% endfor %}
+						{% endif %}
+					</form>
+					
+				</div>
+				
+				
+				
+			</div>
+
+		
+
+			
+		</div>
+
+	</div>
+	
+</body>
+
+
+
+<body>
+	<div class="contenedor-imagen">
+		<img src="{% static '/img/ima.png' %}" alt="Unsplashed background img 1">
+	</div>
+	<div class="letra">
+		<h2>BookStore</h2>	
+	</div>
+	
+
+</body>
+
+
+
+
+</html>
